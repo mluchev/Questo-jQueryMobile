@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Questo</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../lib/jquery-mobile/jquery.mobile-1.4.5.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <script src="../lib/jquery/jquery-1.11.1.js"></script>
+    <script src="../lib/jquery-mobile/jquery.mobile-1.4.5.min.js"></script>
+    <script src="../js/app.js"></script>
+</head>
+<body>
+
+<!-- Start of first page -->
+<div data-role="page" id="begin">
+
+    <div class="ui-header custom ui-bar-c" data-swatch="c" data-theme="c" data-form="ui-bar-c"
+         data-role="header" role="banner">
+        <a href="#questFilter" class="ui-btn-left ui-btn-corner-all ui-btn ui-icon-home
+             ui-btn-icon-notext ui-shadow" title=" Home " data-form="ui-icon" data-role="button"
+           role="button"> Home</a>
+        <h1 class="ui-title" tabindex="0" role="heading" aria-level="1">Conquering Lozenets</h1>
+        <a href="#menu" class="ui-btn-right ui-btn-corner-all ui-btn ui-icon-grid ui-btn-icon-notext ui-shadow"
+           title=" Navigation " data-form="ui-icon" data-role="button" role="button"> Navigation </a></div>
+
+
+    <div role="main" class="ui-content">
+        <img src="../images/logo-big.png" class="logoBanner">
+
+    <a class="anchorButton" href="#questFilter" data-prefetch="true">
+        <button data-icon="arrow-r" data-theme="b" data-form="ui-btn-up-b"
+                class=" ui-btn ui-btn-b ui-icon-arrow-r ui-btn-icon-left ui-shadow ui-corner-all">Start</button>
+    </a>
+    </div>
+</div>
+
+<div data-role="page" id="questFilter">
+
+    <div class="ui-header custom ui-bar-c" data-swatch="c" data-theme="c" data-form="ui-bar-c"
+         data-role="header" role="banner">
+        <a href="#questFilter" class="ui-btn-left ui-btn-corner-all ui-btn ui-icon-home
+             ui-btn-icon-notext ui-shadow" title=" Home " data-form="ui-icon" data-role="button"
+           role="button"> Home</a>
+        <h1 class="ui-title" tabindex="0" role="heading" aria-level="1">Conquering Lozenets</h1>
+        <a href="#menu" class="ui-btn-right ui-btn-corner-all ui-btn ui-icon-grid ui-btn-icon-notext ui-shadow"
+           title=" Navigation " data-form="ui-icon" data-role="button" role="button"> Navigation </a></div>
+
+
+    <div role="main" class="ui-content">
+        <div data-role="rangeslider">
+            <label for="range-1a">Distance:</label>
+            <input name="range-1a" id="range-1a" min="0" max="1000" value="0" type="range" />
+            <label for="range-1b">Distance:</label>
+            <input name="range-1b" id="range-1b" min="0" max="1000" value="1000" type="range" />
+        </div>
+
+        <div data-role="rangeslider">
+            <label for="range-1a">Time:</label>
+            <input name="range-1a" id="range-1a" min="0" max="24" value="0" type="range" />
+            <label for="range-1b">Time:</label>
+            <input name="range-1b" id="range-1b" min="0" max="24" value="24" type="range" />
+        </div>
+
+        <label for="select-choice-a-button">Difficulty:</label>
+        <a href="#select-choice-a-listbox" role="button"
+           id="select-choice-a-button" aria-haspopup="true"
+           class="ui-btn ui-icon-carat-d ui-btn-icon-right ui-btn-a ui-corner-all ui-shadow"
+           data-theme="a" data-form="ui-btn-up-a" data-rel="popup"><span>All</span></a>
+
+        <label for="select-choice-a-button1">Quest Type:</label>
+        <a href="#select-choice-a-listbox1" role="button"
+           id="select-choice-a-button1" aria-haspopup="true"
+           class="ui-btn ui-icon-carat-d ui-btn-icon-right ui-btn-a ui-corner-all ui-shadow"
+           data-theme="a" data-form="ui-btn-up-a" data-rel="popup"><span>All</span></a>
+
+        <!--<ul class="ui-selectmenu-list ui-listview ui-group-theme-a" id="select-choice-a-menu"-->
+            <!--role="listbox" aria-labelledby="select-choice-a-button" data-theme="a">-->
+            <!--<li data-option-index="0" data-icon="false" class="ui-first-child" role="option" aria-selected="true">-->
+                <!--<a href="#" tabindex="-1" class="ui-btn ui-btn-active">Option 1</a>-->
+            <!--</li>-->
+            <!--<li data-option-index="1" data-icon="false" class="" role="option" aria-selected="false">-->
+                <!--<a href="#" tabindex="-1" class="ui-btn">Option 2</a>-->
+            <!--</li>-->
+            <!--<li data-option-index="2" data-icon="false" class="" role="option" aria-selected="false">-->
+                <!--<a href="#" tabindex="-1" class="ui-btn">Option 3</a>-->
+            <!--</li>-->
+            <!--<li data-option-index="3" data-icon="false" class="ui-last-child" role="option" aria-selected="false">-->
+                <!--<a href="#" tabindex="-1" class="ui-btn">Option 4</a>-->
+            <!--</li>-->
+        <!--</ul>-->
+        <a class="anchorButton" href="#filteredQuests" data-prefetch="true">
+            <button data-icon="arrow-r" data-theme="b" data-form="ui-btn-up-b"
+                    class="submitButton ui-btn ui-btn-b ui-icon-arrow-r ui-btn-icon-left ui-shadow ui-corner-all">Filter</button>
+        </a>
+    </div><!-- /content -->
+
+    <!--<div data-role="footer">-->
+    <!--<h4>Page Footer</h4>-->
+    <!--</div>&lt;!&ndash; /footer &ndash;&gt;-->
+</div>
+
+
+<!-- Start of second page -->
+<div data-role="page" id="filteredQuests">
+
+    <div class="ui-header custom ui-bar-c" data-swatch="c" data-theme="c" data-form="ui-bar-c"
+         data-role="header" role="banner">
+        <a href="#questFilter" class="ui-btn-left ui-btn-corner-all ui-btn ui-icon-home
+             ui-btn-icon-notext ui-shadow" title=" Home " data-form="ui-icon" data-role="button"
+           role="button"> Home</a>
+        <h1 class="ui-title" tabindex="0" role="heading" aria-level="1">Conquering Lozenets</h1>
+        <a href="#menu" class="ui-btn-right ui-btn-corner-all ui-btn ui-icon-grid ui-btn-icon-notext ui-shadow"
+           title=" Navigation " data-form="ui-icon" data-role="button" role="button"> Navigation </a></div>
+
+
+    <div role="main" class="ui-content">
+        <ul data-role="listview" data-inset="true" data-filter="true" data-input="#filter-for-listview" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
+            <li class="ui-first-child"><a href="#quest-to-step1" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Conquering Lozenets</a></li>
+            <li><a href="#quest-to-step1" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Exploring the Bulgarian Nuclear Capital</a></li>
+            <li><a href="quest-to-step1" class="ui-btn ui-btn-icon-right ui-icon-carat-r">The Revolutioneers Fight</a></li>
+            <li><a href="#quest-to-step1" class="ui-btn ui-btn-icon-right ui-icon-carat-r">The Paranormal Monastery</a></li>
+            <li class="ui-last-child"><a href="#quest-to-step1" class="ui-btn ui-btn-icon-right ui-icon-carat-r">The Vinkel Motherland</a></li>
+        </ul>
+    </div>
+</div>
+
+<div data-role="page" id="quest-to-step1">
+    <div class="ui-header custom ui-bar-c" data-swatch="c" data-theme="c" data-form="ui-bar-c"
+         data-role="header" role="banner">
+        <a href="#questFilter" class="ui-btn-left ui-btn-corner-all ui-btn ui-icon-home
+             ui-btn-icon-notext ui-shadow" title=" Home " data-form="ui-icon" data-role="button"
+           role="button"> Home</a>
+        <h1 class="ui-title" tabindex="0" role="heading" aria-level="1">Conquering Lozenets</h1>
+        <a href="#menu" class="ui-btn-right ui-btn-corner-all ui-btn ui-icon-grid ui-btn-icon-notext ui-shadow"
+           title=" Navigation " data-form="ui-icon" data-role="button" role="button"> Navigation </a></div>
+
+
+    <div role="main" class="ui-content">
+        <a class="anchorButton" href="#quest_step1" data-prefetch="true">
+            <button data-icon="star" data-theme="b" data-form="ui-btn-up-b"
+                    class="active ui-btn ui-btn-b ui-icon-star ui-btn-icon-left ui-shadow ui-corner-all">The Hacker Spot</button>
+        </a>
+        <img src="../images/arrow-down.png" class="arrow-down">
+        <button data-icon="star" data-theme="b" data-form="ui-btn-up-b"
+                class="inactive ui-btn ui-btn-b ui-icon-star ui-btn-icon-left ui-shadow ui-corner-all">The Lozenets Machu Picchu</button>
+        <img src="../images/arrow-down.png" class="arrow-down">
+        <button data-icon="star" data-theme="b" data-form="ui-btn-up-b"
+                class="inactive ui-btn ui-btn-b ui-icon-star ui-btn-icon-left ui-shadow ui-corner-all">The Foosball Masters Pub</button>
+        <img src="../images/arrow-down.png" class="arrow-down">
+        <button data-icon="star" data-theme="b" data-form="ui-btn-up-b"
+                class="inactive ui-btn ui-btn-b ui-icon-star ui-btn-icon-left ui-shadow ui-corner-all">The Kings Residence</button>
+        <img src="../images/arrow-down.png" class="arrow-down">
+        <button data-icon="star" data-theme="b" data-form="ui-btn-up-b"
+                class="inactive ui-btn ui-btn-b ui-icon-star ui-btn-icon-left ui-shadow ui-corner-all">The Students Restaurant</button>
+    </div>
+
+
+    <!--<div role="main" class="ui-content">-->
+        <!--<ul data-role="listview" data-inset="true" data-filter="true" data-input="#filter-for-listview" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">-->
+            <!--<li class="ui-first-child"><a href="#" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Acura</a></li>-->
+            <!--<li><a href="#" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Audi</a></li>-->
+            <!--<li><a href="#" class="ui-btn ui-btn-icon-right ui-icon-carat-r">BMW</a></li>-->
+            <!--<li><a href="#" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Cadillac</a></li>-->
+            <!--<li class="ui-last-child"><a href="#" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Ferrari</a></li>-->
+        <!--</ul>-->
+    <!--</div>-->
+</div>
+
+<div data-role="page" id="quest-to-step2">
+
+    <div class="ui-header custom ui-bar-c" data-swatch="c" data-theme="c" data-form="ui-bar-c"
+         data-role="header" role="banner">
+        <a href="#questFilter" class="ui-btn-left ui-btn-corner-all ui-btn ui-icon-home
+             ui-btn-icon-notext ui-shadow" title=" Home " data-form="ui-icon" data-role="button"
+           role="button"> Home</a>
+        <h1 class="ui-title" tabindex="0" role="heading" aria-level="1">Conquering Lozenets</h1>
+        <a href="#menu" class="ui-btn-right ui-btn-corner-all ui-btn ui-icon-grid ui-btn-icon-notext ui-shadow"
+           title=" Navigation " data-form="ui-icon" data-role="button" role="button"> Navigation </a></div>
+
+
+    <div role="main" class="ui-content">
+        <a class="anchorButton" href="#quest_step1" data-prefetch="true"> <button data-icon="star" data-theme="b" data-form="ui-btn-up-b"
+                class="active ui-btn ui-btn-b ui-icon-star ui-btn-icon-left ui-shadow ui-corner-all">The Hacker Spot </button>
+         </a>
+        <img src="../images/arrow-down.png" class="active arrow-down">
+        <a class="anchorButton" href="#quest_step2" data-prefetch="true">
+        <button data-icon="star" data-theme="b" data-form="ui-btn-up-b"
+                class="active ui-btn ui-btn-b ui-icon-star ui-btn-icon-left ui-shadow ui-corner-all">The Lozenets Machu Picchu</button>
+        </a>
+        <img src="../images/arrow-down.png" class="arrow-down">
+        <button data-icon="star" data-theme="b" data-form="ui-btn-up-b"
+                class="inactive ui-btn ui-btn-b ui-icon-star ui-btn-icon-left ui-shadow ui-corner-all">The Foosball Masters Pub</button>
+        <img src="../images/arrow-down.png" class="arrow-down">
+        <button data-icon="star" data-theme="b" data-form="ui-btn-up-b"
+                class="inactive ui-btn ui-btn-b ui-icon-star ui-btn-icon-left ui-shadow ui-corner-all">The Kings Residence</button>
+        <img src="../images/arrow-down.png" class="arrow-down">
+        <button data-icon="star" data-theme="b" data-form="ui-btn-up-b"
+                class="inactive ui-btn ui-btn-b ui-icon-star ui-btn-icon-left ui-shadow ui-corner-all">The Students Restaurant</button>
+    </div>
+
+</div>
+
+<div data-role="page" id="quest-to-step3">
+
+    <div class="ui-header custom ui-bar-c" data-swatch="c" data-theme="c" data-form="ui-bar-c"
+         data-role="header" role="banner">
+        <a href="#questFilter" class="ui-btn-left ui-btn-corner-all ui-btn ui-icon-home
+             ui-btn-icon-notext ui-shadow" title=" Home " data-form="ui-icon" data-role="button"
+           role="button"> Home</a>
+        <h1 class="ui-title" tabindex="0" role="heading" aria-level="1">Conquering Lozenets</h1>
+        <a href="#menu" class="ui-btn-right ui-btn-corner-all ui-btn ui-icon-grid ui-btn-icon-notext ui-shadow"
+           title=" Navigation " data-form="ui-icon" data-role="button" role="button"> Navigation </a></div>
+
+
+    <div role="main" class="ui-content">
+        <a class="anchorButton" href="#quest_step1" data-prefetch="true"> <button data-icon="star" data-theme="b" data-form="ui-btn-up-b"
+                                                                                  class="active ui-btn ui-btn-b ui-icon-star ui-btn-icon-left ui-shadow ui-corner-all">The Hacker Spot </button>
+        </a>
+        <img src="../images/arrow-down.png" class="active arrow-down">
+        <a class="anchorButton" href="#quest_step2" data-prefetch="true">
+            <button data-icon="star" data-theme="b" data-form="ui-btn-up-b"
+                    class="active ui-btn ui-btn-b ui-icon-star ui-btn-icon-left ui-shadow ui-corner-all">The Lozenets Machu Picchu</button>
+        </a>
+        <img src="../images/arrow-down.png" class="active arrow-down">
+        <button data-icon="star" data-theme="b" data-form="ui-btn-up-b"
+                class="active ui-btn ui-btn-b ui-icon-star ui-btn-icon-left ui-shadow ui-corner-all">The Foosball Masters Pub</button>
+        <img src="../images/arrow-down.png" class="arrow-down">
+        <button data-icon="star" data-theme="b" data-form="ui-btn-up-b"
+                class="inactive ui-btn ui-btn-b ui-icon-star ui-btn-icon-left ui-shadow ui-corner-all">The Kings Residence</button>
+        <img src="../images/arrow-down.png" class="arrow-down">
+        <button data-icon="star" data-theme="b" data-form="ui-btn-up-b"
+                class="inactive ui-btn ui-btn-b ui-icon-star ui-btn-icon-left ui-shadow ui-corner-all">The Students Restaurant</button>
+    </div>
+
+</div>
+
+<div data-role="page" id="quest_step1">
+
+    <div class="ui-header custom ui-bar-c" data-swatch="c" data-theme="c" data-form="ui-bar-c"
+         data-role="header" role="banner">
+        <a href="#questFilter" class="ui-btn-left ui-btn-corner-all ui-btn ui-icon-home
+             ui-btn-icon-notext ui-shadow" title=" Home " data-form="ui-icon" data-role="button"
+           role="button"> Home</a>
+        <h1 class="ui-title" tabindex="0" role="heading" aria-level="1">Conquering Lozenets - Step 1</h1>
+        <a href="#menu" class="ui-btn-right ui-btn-corner-all ui-btn ui-icon-grid ui-btn-icon-notext ui-shadow"
+           title=" Navigation " data-form="ui-icon" data-role="button" role="button"> Navigation </a></div>
+
+
+    <div role="main" class="ui-content">
+
+        <div data-theme="b" data-form="ui-body-b" class="questContainer ui-body ui-body-b ui-corner-all">
+            <img src="../images/pic-evil.png" class="questStepImage"/>
+            <h1>The Hacker Spot </h1>
+            <p>За да завършиш първи етап, трябва да откриеш следното място.</p>
+
+           Там Ферма, Коши, Лайбниц и техните зли приятели се събират за да изтезават <b>млади български хакери</b>.
+            Там Денис Ричи, Джеймс Гослинг, Дъглас Крокфорд и гумените мечета водят неравна битка с <b>Лошите</b>, но така поддържат надеждата на младите хакери и им дават кураж да продължат напред.
+             Също там, ентусиазирани хакери-ентусиасти през ноември 2014 се хванаха в ръце и довършиха така бленувания <b>Half-Life 3</b> и така нанесоха сериозна щета на Лошите.
+
+            <p>В двора на това митично място, в близост до главния вход, ще откриеш статуя на човек.</p>
+            <label for="inputSolution1"><i>За да преминеш към следващия етап и да научиш повече за това място,
+                въведи фамилното му име</i>:</label>
+            <input type="text" name="name" id="inputSolution1" class="inputSolution" placeholder="Въведи име на човека от статуята"  />
+            <a href="#congrats1" class="anchorButton"  data-prefetch="true">
+                <button data-icon="arrow-r" data-theme="b" data-form="ui-btn-up-b"
+                        class="submitButton ui-btn ui-btn-b ui-icon-arrow-r ui-btn-icon-left ui-shadow ui-corner-all">Submit</button>
+            </a>
+        </div>
+    </div>
+
+</div>
+
+<div data-role="page" id="congrats1">
+
+    <div class="ui-header custom ui-bar-c" data-swatch="c" data-theme="c" data-form="ui-bar-c"
+         data-role="header" role="banner">
+        <a href="#questFilter" class="ui-btn-left ui-btn-corner-all ui-btn ui-icon-home
+             ui-btn-icon-notext ui-shadow" title=" Home " data-form="ui-icon" data-role="button"
+           role="button"> Home</a>
+        <h1 class="ui-title" tabindex="0" role="heading" aria-level="1">Success</h1>
+        <a href="#menu" class="ui-btn-right ui-btn-corner-all ui-btn ui-icon-grid ui-btn-icon-notext ui-shadow"
+           title=" Navigation " data-form="ui-icon" data-role="button" role="button"> Navigation </a></div>
+
+
+    <div role="main" class="ui-content">
+        <div data-theme="b" data-form="ui-body-b" class="questContainer ui-body ui-body-b ui-corner-all">
+
+            <h1>Поздравления, успешно завърши първи етап от куеста "Conquering Lozenets": "The Hacker Spot"</h1>
+            <i>
+                <h3>Интересна информация за ФМИ:</h3>
+                <img src="../images/fmi.jpg" class="questStepImage"/>
+                <p>Факултетът по математика и информатика  (ФМИ) е първият самостоятелен факултет в над половинвековната
+                    история на Пловдивския университет "Паисий Хилендарски". Днес той е  утвърден и авторитетен център
+                    за научни изследвания и подготовка на специалисти в областта на математиката, информатиката и информационните технологии.
+                    В него работят близо 80 висококвалифицирани преподаватели, половината от които са хабилитирани (12 професори и 23 доценти)
+                    и повече от половината – с научни степени (3 доктори на науките и 61 доктори). Голяма част от тях са специализирали
+                    в реномирани чуждестранни научни институти и университети, били са гост-преподаватели в университети на
+                    САЩ, Япония, Африка и Европа. Много са участията им в авторитетни международни научни форуми и в научни и
+                    образователни проекти съвместно с университети от ЕС, САЩ  и др.  ФМИ осъществява обмен на студенти и преподаватели
+                    по различни академични програми с университети в Австрия, Англия, Германия, Ирландия, Испания, Македония, Португалия,
+                    Румъния, Сърбия и Черна гора, Унгария, Финландия.</p>
+
+                <br><br>
+
+                <img src="../images/emanuil.jpg" class="questStepImage"/>
+                <p>Паметник на проф. Емануил Иванов - първият професор по математика на Софийския университет,
+                    основател на Физико-математическото дружество и на
+                    Физико-математическия факултет, открит в двора ФМИ</p>
+                <br><br>
+
+                <p>Интересни линкове:</p>
+                <a href="http://fmi.uni-sofia.bg/">Сайт на ФМИ</a>
+                <a href="http://hackfmi.com/">HackFMI</a>
+                <br><br>
+            </i>
+
+            <a class="anchorButton" href="#quest-to-step2" data-prefetch="true">
+                <button data-icon="arrow-r" data-theme="b" data-form="ui-btn-up-b"
+                        class="submitButton ui-btn ui-btn-b ui-icon-arrow-r ui-btn-icon-left ui-shadow ui-corner-all">Continue</button>
+            </a>
+        </div>
+    </div>
+
+</div>
+
+
+<div data-role="page" id="quest_step2">
+
+    <div class="ui-header custom ui-bar-c" data-swatch="c" data-theme="c" data-form="ui-bar-c"
+         data-role="header" role="banner">
+        <a href="#questFilter" class="ui-btn-left ui-btn-corner-all ui-btn ui-icon-home
+             ui-btn-icon-notext ui-shadow" title=" Home " data-form="ui-icon" data-role="button"
+           role="button"> Home</a>
+        <h1 class="ui-title" tabindex="0" role="heading" aria-level="1">Conquering Lozenets - Step 2</h1>
+        <a href="#menu" class="ui-btn-right ui-btn-corner-all ui-btn ui-icon-grid ui-btn-icon-notext ui-shadow"
+           title=" Navigation " data-form="ui-icon" data-role="button" role="button"> Navigation </a></div>
+
+
+    <div role="main" class="ui-content">
+
+        <div data-theme="b" data-form="ui-body-b" class="questContainer ui-body ui-body-b ui-corner-all">
+            <img src="../images/machu-picchu.jpg" class="questStepImage"/>
+            <h1>The Lozenets Machu Picchu</h1>
+            <p>За да завършиш втори етап, трябва да откриеш забравено и изоставено място, обрасло в буйна растителност,
+                но криещо в себе си огрoмен чар, най-вече заради творческите отпечатъци у себе си.</p>
+            <p>За да го откриеш, тръгни от ФМИ в посока към обект, който по филмите е представен като средище на стройни какички по бански,
+            но в нашата дествителност те са заместени от чичковци в гащеризони и потници с маркучи в ръка. Между това място и Оранжевия замък в близост,
+                се намира търсеният обект. Съществува пътека съвсем наблизо, ще оставим в твои ръце да я откриеш.</p>
+                <p>Там ще откриеш редица модерни шедьоври, наследили древното пещерно изобразително изкуство.
+                Един от тях изобразява тъмнокож музикант.
+            </p>
+            <label for="inputSolution1"><i>За да преминеш към следващия етап и да научиш повече за това място,
+                въведи названието на музикалния инструмент, на който свири този музикант</i>:</label>
+            <input type="text" name="name" id="inputSolution1" class="inputSolution"  placeholder="Въведи названието на музикалния инструмент"/>
+            <a class="anchorButton" href="#congrats2" data-prefetch="true">
+                <button data-icon="arrow-r" data-theme="b" data-form="ui-btn-up-b"
+                        class="submitButton ui-btn ui-btn-b ui-icon-arrow-r ui-btn-icon-left ui-shadow ui-corner-all">Submit</button>
+            </a>
+        </div>
+    </div>
+
+</div>
+
+<div data-role="page" id="congrats2">
+
+    <div class="ui-header custom ui-bar-c" data-swatch="c" data-theme="c" data-form="ui-bar-c"
+         data-role="header" role="banner">
+        <a href="#questFilter" class="ui-btn-left ui-btn-corner-all ui-btn ui-icon-home
+             ui-btn-icon-notext ui-shadow" title=" Home " data-form="ui-icon" data-role="button"
+           role="button"> Home</a>
+        <h1 class="ui-title" tabindex="0" role="heading" aria-level="1">Success</h1>
+        <a href="#menu" class="ui-btn-right ui-btn-corner-all ui-btn ui-icon-grid ui-btn-icon-notext ui-shadow"
+           title=" Navigation " data-form="ui-icon" data-role="button" role="button"> Navigation </a></div>
+
+
+    <div role="main" class="ui-content">
+        <div data-theme="b" data-form="ui-body-b" class="questContainer ui-body ui-body-b ui-corner-all">
+
+            <h1>Поздравления, успешно завърши втори етап от куеста "Conquering Lozenets": "The Lozenets Machu Picchu"</h1>
+            <i>
+                <h3>Интересна информация за мястото:</h3>
+                <p>Откритите руини са от недовършения строеж на сграда, предвидена да бъде факултет по география към СУ.</p>
+
+                <br>
+
+                <img src="../images/q2.jpg" class="questStepImage second"/>
+                <img src="../images/q1.jpg" class="questStepImage second"/>
+                <img src="../images/q4.jpg" class="questStepImage second"/>
+                <img src="../images/q6.jpg" class="questStepImage second"/>
+
+                <div class="separator"></div>
+
+
+                <!--<p>Интересни линкове:</p>-->
+                <!--<a href="http://www.graffiticreator.net/">http://www.graffiticreator.net/</a>-->
+                <!--<br><br>-->
+            </i>
+
+            <br><br>
+
+            <a class="anchorButton" href="#quest-to-step3" data-prefetch="true">
+                <button data-icon="arrow-r" data-theme="b" data-form="ui-btn-up-b"
+                        class="submitButton ui-btn ui-btn-b ui-icon-arrow-r ui-btn-icon-left ui-shadow ui-corner-all">Continue</button>
+            </a>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

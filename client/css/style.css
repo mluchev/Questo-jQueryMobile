@@ -1,0 +1,189 @@
+/*body {*/
+    /*background-color: #0E4C0C;*/
+    /*background-color: #9d9d9d;*/
+    /*color: #ffffff;*/
+/*}*/
+
+.ui-header.custom {
+    background-color: #02560A;
+    color: #ffffff;
+    border-color: #000000;
+}
+
+button.ui-btn.ui-btn-b.ui-btn-icon-left.ui-shadow.ui-corner-all {
+    background-color: #02560A;
+    color: #ffffff;
+}
+
+a.anchorButton {
+    text-decoration: none;
+}
+.submitButton {
+    margin-top: 40px;
+}
+
+h1, h2 {
+    font-weight: normal;
+
+}
+
+.logoBanner {
+    max-width: 300px;
+    min-width: 30px;
+
+    display: table;
+    margin: 0 auto;
+    padding: 150px 0px;
+}
+
+.arrow-down.active {
+    opacity: 1;
+}
+
+.arrow-down {
+    max-width: 30px;
+    min-width: 10px;
+    display: table;
+    margin: 0 auto;
+    opacity: 0.7;
+}
+
+#begin .ui-content {
+    height: 500px;
+}
+
+.ui-content {
+    background-image: url("../images/grass.jpg");
+    background-size: contain;
+
+    color: white;
+}
+
+button.inactive {
+    opacity: 0.6;
+}
+
+.questContainer {
+    background-color: #ffffff;
+    color: rgba(0, 0, 0, 0.76);
+}
+
+.questStepImage {
+    float: left;
+    width: 150px;
+    margin: 10px;
+}
+
+#inputSolution1 {
+    background-color: #94F292;
+    color: #686868;
+    font-style: italic;
+}
+.separator {
+    clear: both;
+    /*height: 20px;*/
+}
+
+.questStepImage.second {
+    float: none;
+    width: 80%;
+    display: table;
+    margin: 0 auto;
+    padding: 10px;
+    
+}
+
+
+.ui-btn-icon-notext.ui-btn-right {
+    /*top: .3125em;*/
+    /*right: .3125em;*/
+    /*background-color: brown;*/
+}
+
+/*#appHeader.navbar-inverse {*/
+    /*background-color: #0E4C0C;*/
+    /*border-color: #3F1A1A;*/
+/*}*/
+
+/*#appHeader.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {*/
+    /*background-color: #fff;*/
+    /*opacity: 0.7;*/
+/*}*/
+
+/*#appHeader.navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus {*/
+    /*color: #fff;*/
+    /*background-color: transparent;*/
+/*}*/
+
+
+/*#appHeader.navbar-inverse .navbar-toggle:hover .icon-bar {*/
+    /*background-color: #247C06;*/
+/*}*/
+
+/*#appHeader.navbar-inverse .navbar-collapse {*/
+    /*background-color: #222;*/
+    /*opacity: 0.7;*/
+/*}*/
+
+/*#logoContainer {*/
+    /*width:20px;*/
+    /*height: 20px;*/
+/*}*/
+
+/*#textContainer {*/
+    /*margin-top: 70px;*/
+/*}*/
+
+/*#logoContainer {*/
+    /*margin-top: 85px;*/
+    /*height: 30px;*/
+/*}*/
+
+/*.col-centered{*/
+    /*display: inline-block;*/
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+/*}*/
+
+/*.navButton {*/
+    /*position: relative;*/
+    /*float: right;*/
+    /*padding: 10px 10px;*/
+    /*margin-top: 8px;*/
+    /*margin-right: 15px;*/
+    /*margin-bottom: 8px;*/
+    /*background-color: transparent;*/
+    /*background-image: none;*/
+    /*border: 1px solid transparent;*/
+    /*border-radius: 4px;*/
+
+    /*color: white;*/
+
+    /*border-color: #333;*/
+/*}*/
+
+/*.navButton:hover {*/
+    /*background-color: white;*/
+    /*color: #0E4C0C;*/
+/*}*/
+
+/*.navButton span {*/
+    /*width: 20px;*/
+    /*height: 20px;*/
+/*}*/
+
+/*#homeButton  {*/
+    /*float: left;*/
+/*}*/
+
+/*#menuButton {*/
+    /*float: right;*/
+/*}*/
+
+/*#navTitle {*/
+    /*display: inline-block;*/
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+
+    /*color: white;*/
+/*}*/

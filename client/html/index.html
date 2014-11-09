@@ -29,7 +29,9 @@
 
 
     <div role="main" class="ui-content">
+
         <img src="../images/logo-big.png" class="logoBanner">
+        <h2 class = "moto"><i>the journey is the destination </i></h2>
 
     <a class="anchorButton" href="#questFilter" data-prefetch="true">
         <button data-icon="arrow-r" data-theme="b" data-form="ui-btn-up-b"
@@ -52,29 +54,29 @@
 
     <div role="main" class="ui-content">
         <div data-role="rangeslider">
-            <label for="range-1a">Distance:</label>
+            <label class="filterLabel" for="range-1a">Distance:</label>
             <input name="range-1a" id="range-1a" min="0" max="1000" value="0" type="range" />
             <label for="range-1b">Distance:</label>
             <input name="range-1b" id="range-1b" min="0" max="1000" value="1000" type="range" />
         </div>
 
         <div data-role="rangeslider">
-            <label for="range-1a">Time:</label>
+            <label class="filterLabel" for="range-1a">Time:</label>
             <input name="range-1a" id="range-1a" min="0" max="24" value="0" type="range" />
             <label for="range-1b">Time:</label>
             <input name="range-1b" id="range-1b" min="0" max="24" value="24" type="range" />
         </div>
 
-        <label for="select-choice-a-button">Difficulty:</label>
+        <label class="filterLabel" for="select-choice-a-button">Difficulty:</label>
         <a href="#select-choice-a-listbox" role="button"
            id="select-choice-a-button" aria-haspopup="true"
-           class="ui-btn ui-icon-carat-d ui-btn-icon-right ui-btn-a ui-corner-all ui-shadow"
+           class="filterSelect ui-btn ui-icon-carat-d ui-btn-icon-right ui-btn-a ui-corner-all ui-shadow"
            data-theme="a" data-form="ui-btn-up-a" data-rel="popup"><span>All</span></a>
 
-        <label for="select-choice-a-button1">Quest Type:</label>
+        <label class="filterLabel" for="select-choice-a-button1">Quest Type:</label>
         <a href="#select-choice-a-listbox1" role="button"
            id="select-choice-a-button1" aria-haspopup="true"
-           class="ui-btn ui-icon-carat-d ui-btn-icon-right ui-btn-a ui-corner-all ui-shadow"
+           class="filterSelect ui-btn ui-icon-carat-d ui-btn-icon-right ui-btn-a ui-corner-all ui-shadow"
            data-theme="a" data-form="ui-btn-up-a" data-rel="popup"><span>All</span></a>
 
         <!--<ul class="ui-selectmenu-list ui-listview ui-group-theme-a" id="select-choice-a-menu"-->
@@ -253,18 +255,20 @@
     <div role="main" class="ui-content">
 
         <div data-theme="b" data-form="ui-body-b" class="questContainer ui-body ui-body-b ui-corner-all">
-            <img src="../images/pic-evil.png" class="questStepImage"/>
-            <h1>The Hacker Spot </h1>
+            <!--<img src="../images/pic-evil.png" class="questStepImage"/>-->
+            <h2>The Hacker Spot </h2>
             <p>За да завършиш първи етап, трябва да откриеш следното място.</p>
 
            Там Ферма, Коши, Лайбниц и техните зли приятели се събират за да изтезават <b>млади български хакери</b>.
             Там Денис Ричи, Джеймс Гослинг, Дъглас Крокфорд и гумените мечета водят неравна битка с <b>Лошите</b>, но така поддържат надеждата на младите хакери и им дават кураж да продължат напред.
-             Също там, ентусиазирани хакери-ентусиасти през ноември 2014 се хванаха в ръце и довършиха така бленувания <b>Half-Life 3</b> и така нанесоха сериозна щета на Лошите.
+             Също там, ентусиазирани кодери-ентусиасти през ноември 2014 се хванаха в ръце и довършиха така бленувания <b>Half-Life 3</b> и така нанесоха сериозна щета на Лошите.
+
+            <img src="../images/math.jpg" class="math second questStepImage"/>
 
             <p>В двора на това митично място, в близост до главния вход, ще откриеш статуя на човек.</p>
             <label for="inputSolution1"><i>За да преминеш към следващия етап и да научиш повече за това място,
                 въведи фамилното му име</i>:</label>
-            <input type="text" name="name" id="inputSolution1" class="inputSolution" placeholder="Въведи име на човека от статуята"  />
+            <input type="text" name="name" id="inputSolution1" class="inputSolution" placeholder="Фамилно име на човека от статуята"  />
             <a href="#congrats1" class="anchorButton"  data-prefetch="true">
                 <button data-icon="arrow-r" data-theme="b" data-form="ui-btn-up-b"
                         class="submitButton ui-btn ui-btn-b ui-icon-arrow-r ui-btn-icon-left ui-shadow ui-corner-all">Submit</button>
@@ -289,7 +293,7 @@
     <div role="main" class="ui-content">
         <div data-theme="b" data-form="ui-body-b" class="questContainer ui-body ui-body-b ui-corner-all">
 
-            <h1>Поздравления, успешно завърши първи етап от куеста "Conquering Lozenets": "The Hacker Spot"</h1>
+            <h2>Поздравления, успешно завърши първи етап от куеста "Conquering Lozenets": "The Hacker Spot"</h2>
             <i>
                 <h3>Интересна информация за ФМИ:</h3>
                 <img src="../images/fmi.jpg" class="questStepImage"/>
@@ -307,9 +311,9 @@
                 <br><br>
 
                 <img src="../images/emanuil.jpg" class="questStepImage"/>
-                <p>Паметник на проф. Емануил Иванов - първият професор по математика на Софийския университет,
-                    основател на Физико-математическото дружество и на
-                    Физико-математическия факултет, открит в двора ФМИ</p>
+                <p>Паметник на проф. Емануил Иванов - <u>първият професор по математика</u> на Софийския университет,
+                    <u>основател</u> на Физико-математическото дружество и на
+                    Физико-математическия факултет.</p>
                 <br><br>
 
                 <p>Интересни линкове:</p>
@@ -344,18 +348,18 @@
 
         <div data-theme="b" data-form="ui-body-b" class="questContainer ui-body ui-body-b ui-corner-all">
             <img src="../images/machu-picchu.jpg" class="questStepImage"/>
-            <h1>The Lozenets Machu Picchu</h1>
+            <h2>The Lozenets Machu Picchu</h2>
             <p>За да завършиш втори етап, трябва да откриеш забравено и изоставено място, обрасло в буйна растителност,
                 но криещо в себе си огрoмен чар, най-вече заради творческите отпечатъци у себе си.</p>
-            <p>За да го откриеш, тръгни от ФМИ в посока към обект, който по филмите е представен като средище на стройни какички по бански,
-            но в нашата дествителност те са заместени от чичковци в гащеризони и потници с маркучи в ръка. Между това място и Оранжевия замък в близост,
+            <p>За да го откриеш, тръгни от ФМИ в посока към обект, който по филмите е представен като средище на стройни <b>какички</b> по бански,
+            но в нашата дествителност те са заместени от <b>чичковци в гащеризони</b> и потници с маркучи в ръка. Между това място и <b>Оранжевия замък</b> в близост,
                 се намира търсеният обект. Съществува пътека съвсем наблизо, ще оставим в твои ръце да я откриеш.</p>
-                <p>Там ще откриеш редица модерни шедьоври, наследили древното пещерно изобразително изкуство.
-                Един от тях изобразява тъмнокож музикант.
+                <p>Там ще откриеш редица модерни <b>шедьоври</b>, наследили древното пещерно изобразително изкуство.
+                Един от тях изобразява <b>тъмнокож музикант</b>.
             </p>
             <label for="inputSolution1"><i>За да преминеш към следващия етап и да научиш повече за това място,
                 въведи названието на музикалния инструмент, на който свири този музикант</i>:</label>
-            <input type="text" name="name" id="inputSolution1" class="inputSolution"  placeholder="Въведи названието на музикалния инструмент"/>
+            <input type="text" name="name" id="inputSolution1" class="inputSolution"  placeholder="музикалния инструмент"/>
             <a class="anchorButton" href="#congrats2" data-prefetch="true">
                 <button data-icon="arrow-r" data-theme="b" data-form="ui-btn-up-b"
                         class="submitButton ui-btn ui-btn-b ui-icon-arrow-r ui-btn-icon-left ui-shadow ui-corner-all">Submit</button>
@@ -380,7 +384,7 @@
     <div role="main" class="ui-content">
         <div data-theme="b" data-form="ui-body-b" class="questContainer ui-body ui-body-b ui-corner-all">
 
-            <h1>Поздравления, успешно завърши втори етап от куеста "Conquering Lozenets": "The Lozenets Machu Picchu"</h1>
+            <h2>Поздравления, успешно завърши втори етап от куеста "Conquering Lozenets": "The Lozenets Machu Picchu"</h2>
             <i>
                 <h3>Интересна информация за мястото:</h3>
                 <p>Откритите руини са от недовършения строеж на сграда, предвидена да бъде факултет по география към СУ.</p>

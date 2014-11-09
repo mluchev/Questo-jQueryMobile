@@ -33,7 +33,11 @@ h1, h2 {
 
     display: table;
     margin: 0 auto;
-    padding: 150px 0px;
+    padding: 150px 0px 0px 20px;
+}
+
+.moto {
+    margin-bottom: 120px;
 }
 
 .arrow-down.active {
@@ -64,6 +68,7 @@ button.inactive {
 }
 
 .questContainer {
+    text-align: justify;
     background-color: #ffffff;
     color: rgba(0, 0, 0, 0.76);
 }
@@ -84,6 +89,10 @@ button.inactive {
     /*height: 20px;*/
 }
 
+.math.second.questStepImage {
+    width: 150px;
+}
+
 .questStepImage.second {
     float: none;
     width: 80%;
@@ -93,6 +102,18 @@ button.inactive {
     
 }
 
+.filterSelect {
+    display: table;
+    margin: 0 auto;
+    width: 30%;
+}
+
+.filterLabel {
+    text-align: center;
+    display: table;
+    margin: 0 auto;
+    padding-top: 10px;
+}
 
 .ui-btn-icon-notext.ui-btn-right {
     /*top: .3125em;*/
